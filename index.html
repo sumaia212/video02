@@ -1,155 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unlock Your Movie</title>
+<title>Viral Videos</title>
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
-background:#f5f7fb;
 margin:0;
-padding:0;
+font-family:Arial, sans-serif;
+background:#3898C8;
 text-align:center;
 }
 
 .container{
 max-width:500px;
 margin:auto;
-padding:20px;
 }
 
-h1{
-color:#1e2a44;
-font-size:28px;
-margin-top:20px;
+.top-heading{
+font-size:18px;
+font-weight:bold;
+padding:15px;
+background:#1e2a44;
+color:white;
 }
 
-p{
-color:#666;
-font-size:16px;
-margin-bottom:25px;
+.ad-top,.ad-bottom{
+margin:10px 0;
+}
+
+.reels{
+height:80vh;
+overflow-y:auto;
+scroll-snap-type:y mandatory;
+}
+
+.reel{
+height:80vh;
+scroll-snap-align:start;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .video-box{
 background:white;
 padding:25px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+width:90%;
 }
 
-/* PLAY BUTTON */
+/* emoji animation */
+
+.click-hint{
+font-size:22px;
+font-weight:bold;
+color:#ff3b3b;
+margin-bottom:10px;
+animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(10px);}
+}
+
+/* button */
 
 .play-btn{
-display:inline-block;
+display:flex;
+align-items:center;
+justify-content:center;
+
 background:#ff3b3b;
 color:white;
-padding:18px 35px;
-font-size:20px;
+
+width:220px;
+height:55px;
+
+margin:auto;
+
+font-size:18px;
 border-radius:50px;
-text-decoration:none;
 font-weight:bold;
-margin-top:20px;
 cursor:pointer;
 
 animation:pulse 1.5s infinite;
 }
 
-.play-btn:hover{
-background:#e62e2e;
-}
-
-/* ANIMATION */
-
 @keyframes pulse{
-
 0%{transform:scale(1);}
-
 50%{transform:scale(1.08);}
-
 100%{transform:scale(1);}
-
 }
 
-footer{
-margin-top:30px;
-font-size:12px;
-color:#888;
+.views{
+color:#ff3b3b;
+font-weight:bold;
+margin:10px 0;
 }
 
-.ad-top{
-margin-bottom:20px;
+.countdown{
+font-size:14px;
+margin-top:5px;
 }
 
-.ad-bottom{
-margin-top:25px;
+.loader{
+display:none;
+margin-top:10px;
+}
+
+.loader-bar{
+width:0%;
+height:8px;
+background:#ff3b3b;
+border-radius:5px;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<!-- TOP BANNER AD -->
-
-<div class="ad-top">
-
-<!-- Adsterra Banner 728x90 -->
-<script>
-  atOptions = {
-    'key' : 'a93a462c57bd0b8d111380b394efbf9b',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/a93a462c57bd0b8d111380b394efbf9b/invoke.js"></script>
-
+<div class="top-heading">
+Fast Clicks And second click ad Show Then Video Open
 </div>
 
-<h1>NEW VIRAL VIDEOS</h1>
+<div class="ad-top">
+<script> atOptions = { 'key' : 'a93a462c57bd0b8d111380b394efbf9b', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/a93a462c57bd0b8d111380b394efbf9b/invoke.js"></script>
+</div>
 
-<p>Fast Clicks And second click ad Show Then Video Open</p>
+<div class="reels">
+
+<div class="reel">
 
 <div class="video-box">
 
-<h3>🎬 Full Video</h3>
+<h2>🔥 Viral Video</h2>
 
-<a class="play-btn" onclick="handleClick()">▶ Play Full Video</a>
+<p class="views">
+👁 <span id="views">1284932</span> people watched
+</p>
+
+<div class="click-hint">
+👇 CLICK HERE 👇
+</div>
+
+<div id="playBtn" class="play-btn" onclick="handleClick()">
+▶ Play Full Video
+</div>
+
+<div class="countdown">
+Video unlock in <span id="timer">5</span> seconds
+</div>
+
+<div class="loader">
+
+<p>Loading video...</p>
+
+<div style="background:#ddd;border-radius:5px;">
+<div class="loader-bar" id="progressBar"></div>
+</div>
 
 </div>
 
-<!-- BOTTOM BANNER AD -->
+</div>
+
+</div>
+
+</div>
 
 <div class="ad-bottom">
-
-<!-- Adsterra Banner 728x90 -->
-<script>
-  atOptions = {
-    'key' : 'a93a462c57bd0b8d111380b394efbf9b',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/a93a462c57bd0b8d111380b394efbf9b/invoke.js"></script>
-
+<script> atOptions = { 'key' : 'a93a462c57bd0b8d111380b394efbf9b', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/a93a462c57bd0b8d111380b394efbf9b/invoke.js"></script>
 </div>
-
-<footer>
-
-© 2026 Movie Stream | All Rights Reserved
-
-</footer>
 
 </div>
 
@@ -158,24 +187,103 @@ margin-top:25px;
 let clickCount = 0;
 
 const adLink = "https://www.effectivegatecpm.com/r67eze3m?key=ff1fa683d527334a41af7c9937aa0324";
-
 const videoLink = "https://cdn.videy.co/axPTg6fh1.mp4";
 
 function handleClick(){
 
 clickCount++;
 
-if(clickCount <= 2){
+let btn = document.getElementById("playBtn");
 
+if(clickCount === 1){
+
+btn.innerText = "1";
 window.location.href = adLink;
+
+}
+
+else if(clickCount === 2){
+
+btn.innerText = "2";
+window.location.href = adLink;
+
+}
+
+else if(clickCount === 3){
+
+btn.innerText = "Open Video";
+
+}
+
+else{
+
+startLoader();
+
+}
+
+}
+
+function startLoader(){
+
+document.querySelector(".loader").style.display = "block";
+
+let bar = document.getElementById("progressBar");
+
+let width = 0;
+
+let interval = setInterval(function(){
+
+if(width >= 100){
+
+clearInterval(interval);
+window.location.href = videoLink;
 
 }else{
 
-window.location.href = videoLink;
+width++;
+bar.style.width = width + "%";
 
 }
 
+},35);
+
 }
+
+/* countdown */
+
+let time = 5;
+
+let timer = setInterval(function(){
+
+time--;
+
+let el = document.getElementById("timer");
+
+if(el){
+el.innerText = time;
+}
+
+if(time <= 0){
+clearInterval(timer);
+}
+
+},1000);
+
+/* live views */
+
+let views = 1284932;
+
+setInterval(function(){
+
+views += Math.floor(Math.random()*6);
+
+let el = document.getElementById("views");
+
+if(el){
+el.innerText = views;
+}
+
+},2000);
 
 </script>
 
